@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Richard Hughes <richard@hughsie.com> -->
+<component type="firmware">
+  <id>com.wacom.Intuos.BT-M.MainFW.firmware</id>
+  <name>Wacom Intuos BT M</name>
+  <summary>Firmware for the Wacom Intuos BT M Tablet</summary>
+  <description>
+    <p>
+      Wacom Intuos helps you find new ways to create.
+      Designed for those who are drawing, painting and photo editing with their
+      Mac or PC for the first time, the Wacom Intuos is easy to setup and use.
+    </p>
+    <p>
+      The Wacom Intuos gives you all the tools you need to enhance your creativity.
+      Its versatility and ease-of-use means you can customize Wacom Intuos to
+      fit your own way of working.
+      Whether you love to draw manga art, paint digital watercolors or retouch
+      your photos, you can tailor the pen tablet to suit your style, your way.
+    </p>
+  </description>
+  <provides>
+    <!-- USB\VID_056A&PID_0378 -->
+    <firmware type="flashed">edf56833-dbe5-56ca-a651-734b01bb02ba</firmware>
+  </provides>
+  <url type="homepage">https://us-store.wacom.com/Product/wacom-intuos-m-bt</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <developer_name>Wacom</developer_name>
+  <releases>
+    <release urgency="high" version="1.66" date="2018-06-15">
+      <checksum filename="MainFW_OakM_Ver0166.wac" target="content"/>
+      <description>
+        <p>
+          This release does something, and I need to ask Wacom what to put here.
+          It is supposed to outline to the user what was changed in this
+          firmware version and why they should update, rather than any geeky
+          information only useful to a firmware engineer.
+        </p>
+      </description>
+    </release>
+  </releases>
+
+  <!-- only newer versions of fwupd know how to write to this hardware -->
+  <requires>
+    <id compare="ge" version="1.0.8">org.freedesktop.fwupd</id>
+  </requires>
+
+</component>

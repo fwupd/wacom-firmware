@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Richard Hughes <richard@hughsie.com> -->
+<component type="firmware">
+  <id>com.wacom.Intuos.BT-M.BluetoothFW.firmware</id>
+  <name>Wacom Intuos BT M</name>
+  <summary>Bluetooth Firmware for the Wacom Intuos BT M Tablet</summary>
+  <description>
+    <p>
+      Wacom Intuos helps you find new ways to create.
+      Designed for those who are drawing, painting and photo editing with their
+      Mac or PC for the first time, the Wacom Intuos is easy to setup and use.
+    </p>
+    <p>
+      The Wacom Intuos gives you all the tools you need to enhance your creativity.
+      Its versatility and ease-of-use means you can customize Wacom Intuos to
+      fit your own way of working.
+      Whether you love to draw manga art, paint digital watercolors or retouch
+      your photos, you can tailor the pen tablet to suit your style, your way.
+    </p>
+  </description>
+  <provides>
+    <!-- USB\VID_056A&PID_0378-bluetooth -->
+    <firmware type="flashed">230fb992-35c7-56b1-8236-7f5674a04153</firmware>
+  </provides>
+  <url type="homepage">https://us-store.wacom.com/Product/wacom-intuos-m-bt</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <developer_name>Wacom</developer_name>
+  <releases>
+    <release urgency="high" version="1.11" date="2018-06-15">
+      <checksum filename="BluetoothFW_OakM_V1.11.airoflash" target="content"/>
+      <description>
+        <p>
+          This is the initial hardware release, and is only available on the
+          LVFS to test downgrading.
+          Normal users do not need to apply this firmware update.
+        </p>
+      </description>
+    </release>
+  </releases>
+
+  <!-- only newer versions of fwupd know how to write to this hardware -->
+  <requires>
+    <id compare="ge" version="1.0.8">org.freedesktop.fwupd</id>
+  </requires>
+
+</component>
