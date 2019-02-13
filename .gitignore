@@ -1,3 +1,5 @@
 *.airoflash
 *.cab
 *.wac
+*.hex
+*.srec

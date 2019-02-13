@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019 Richard Hughes <richard@hughsie.com> -->
+<component type="firmware">
+  <id>com.wacom.PTH-460.firmware</id>
+  <name>Intuos Pro Pen Tablet</name>
+  <summary>Firmware for the Wacom Intuos Pro (touch)</summary>
+  <description>
+    <p>
+      Updating the firmware on your Intuos Pro tablet improves performance and
+      adds new features.
+    </p>
+  </description>
+  <provides>
+    <!-- USB\VID_056A&PID_0392-touch -->
+    <firmware type="flashed">5d372f03-c9ad-589c-99bb-7d2811e60fcd</firmware>
+  </provides>
+  <url type="homepage">https://www.wacom.com/en-cl/products/pen-tablets/wacom-intuos-pro</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Proprietary</project_license>
+  <developer_name>Wacom</developer_name>
+  <releases>
+    <release urgency="medium" version="0.1" date="2019-01-31">
+      <checksum filename="UPDATE_G11T_viper_0392_v0004_rev00.hex" target="content"/>
+      <description>
+        <p>
+          This update fixes nothing. Ping?
+        </p>
+      </description>
+    </release>
+  </releases>
+  <custom>
+    <value key="LVFS::UpdateProtocol">com.wacom.usb</value>
+  </custom>
+  <requires>
+    <id compare="ge" version="1.2.5">org.freedesktop.fwupd</id>
+  </requires>
+</component>
