@@ -2,8 +2,9 @@
 <!-- Copyright 2018 Richard Hughes <richard@hughsie.com> -->
 <component type="firmware">
   <id>com.wacom.Intuos.BT-M.BluetoothFW.firmware</id>
-  <name>Wacom Intuos BT M</name>
-  <summary>Bluetooth Firmware for the Wacom Intuos BT M Tablet</summary>
+  <name>Intuos BT M</name>
+  <name_variant_suffix>Bluetooth</name_variant_suffix>
+  <summary>Firmware for the Wacom Intuos BT M Tablet</summary>
   <description>
     <p>
       Wacom Intuos helps you find new ways to create.
@@ -22,6 +23,9 @@
     <!-- USB\VID_056A&PID_0378-bluetooth -->
     <firmware type="flashed">230fb992-35c7-56b1-8236-7f5674a04153</firmware>
   </provides>
+  <categories>
+    <category>X-Device</category>
+  </categories>
   <url type="homepage">https://us-store.wacom.com/Product/wacom-intuos-m-bt</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
@@ -44,5 +48,8 @@
   <requires>
     <id compare="ge" version="1.0.8">org.freedesktop.fwupd</id>
   </requires>
-
+  <custom>
+    <value key="LVFS::VersionFormat">pair</value>
+    <value key="LVFS::UpdateProtocol">com.wacom.usb</value>
+  </custom>
 </component>

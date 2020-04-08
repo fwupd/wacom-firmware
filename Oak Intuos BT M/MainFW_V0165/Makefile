@@ -3,7 +3,7 @@
 VENDOR=Wacom
 PROJECT_NAME=Intuos_BT-M_MainFW
 VERSION=1.65
-FIRMWARE_FILES=MainFW_OakM_Ver0165.wac
+FIRMWARE_FILES=MainFW_OakM_ver0165.wac
 METAINFO_FILES=com.wacom.Intuos.BT-M.MainFW.metainfo.xml
 
 all: $(VENDOR)-$(PROJECT_NAME)-$(VERSION).cab

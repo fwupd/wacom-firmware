@@ -2,7 +2,7 @@
 <!-- Copyright 2018 Richard Hughes <richard@hughsie.com> -->
 <component type="firmware">
   <id>com.wacom.Intuos.BT-M.MainFW.firmware</id>
-  <name>Wacom Intuos BT M</name>
+  <name>Intuos BT M</name>
   <summary>Firmware for the Wacom Intuos BT M Tablet</summary>
   <description>
     <p>
@@ -22,13 +22,16 @@
     <!-- USB\VID_056A&PID_0378 -->
     <firmware type="flashed">edf56833-dbe5-56ca-a651-734b01bb02ba</firmware>
   </provides>
+  <categories>
+    <category>X-Device</category>
+  </categories>
   <url type="homepage">https://us-store.wacom.com/Product/wacom-intuos-m-bt</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <developer_name>Wacom</developer_name>
   <releases>
     <release urgency="high" version="1.65" date="2018-06-15">
-      <checksum filename="MainFW_OakM_Ver0165.wac" target="content"/>
+      <checksum filename="MainFW_OakM_ver0165.wac" target="content"/>
       <description>
         <p>
           This is the initial hardware release, and is only available on the
@@ -43,5 +46,8 @@
   <requires>
     <id compare="ge" version="1.0.8">org.freedesktop.fwupd</id>
   </requires>
-
+  <custom>
+    <value key="LVFS::VersionFormat">pair</value>
+    <value key="LVFS::UpdateProtocol">com.wacom.usb</value>
+  </custom>
 </component>

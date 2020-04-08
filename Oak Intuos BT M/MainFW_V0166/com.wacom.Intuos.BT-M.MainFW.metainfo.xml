@@ -2,7 +2,7 @@
 <!-- Copyright 2018 Richard Hughes <richard@hughsie.com> -->
 <component type="firmware">
   <id>com.wacom.Intuos.BT-M.MainFW.firmware</id>
-  <name>Wacom Intuos BT M</name>
+  <name>Intuos BT M</name>
   <summary>Firmware for the Wacom Intuos BT M Tablet</summary>
   <description>
     <p>
@@ -22,6 +22,9 @@
     <!-- USB\VID_056A&PID_0378 -->
     <firmware type="flashed">edf56833-dbe5-56ca-a651-734b01bb02ba</firmware>
   </provides>
+  <categories>
+    <category>X-Device</category>
+  </categories>
   <url type="homepage">https://us-store.wacom.com/Product/wacom-intuos-m-bt</url>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
@@ -44,5 +47,8 @@
   <requires>
     <id compare="ge" version="1.0.8">org.freedesktop.fwupd</id>
   </requires>
-
+  <custom>
+    <value key="LVFS::VersionFormat">pair</value>
+    <value key="LVFS::UpdateProtocol">com.wacom.usb</value>
+  </custom>
 </component>
